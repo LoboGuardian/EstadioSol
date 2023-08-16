@@ -9,13 +9,98 @@
 </head>
 <body>
     <head>
-        Esto es el Head
+        <nav>
+            <ul>
+                <li>Inicio</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
     </head>
     <main>
-        Esto el main
+        <form action="">
+            <fieldset>
+                <legend><h2 class="titulos">Datos del comprador:</h2></legend>
+
+                <!-- Nombre -->
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre..." required>
+                <br><br>
+                
+                <!-- Apellido -->
+                <label for="apellido">Apellido: </label>
+                <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido..." required>
+                <br><br>
+
+                
+                <!-- DNI -->
+                <label for="dni">DNI: </label>
+                <input type="number" name="dni" id="dni" placeholder="Ingrese su DNI..." maxlength="5">
+                <br><br>
+
+                <!-- Apellido -->
+                <label for="fecnac">Fecha de Concierto: </label>
+                <input type="date" name="fecnac" id="fecnac" required>
+
+                <br><br>
+
+                <!-- Correo -->
+                <label for="mail">Correo: </label>
+                <input type="mail" name="Correo" id="Correo" placeholder="Ingrese su Correo..." required>
+                <br><br>
+                
+                
+                <!-- Codigo -->
+                <label for="password">Codigo Movil: </label>
+                <input type="password" name="password" id="password" placeholder="Ingrese el codigo movil..." required>
+                <br><br>
+
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Datos para validación
+                </legend>
+                <label for="horario">Horario</label>
+                <select name="horario" id="horario">
+                    <option value="0"></option>
+                    <option value="1">9PM</option>
+                    <option value="2">10PM</option>
+                    <option value="3">11PM</option>
+                    <option value="4">12PM</option>
+                    <option value="5">4AM</option>
+                </select>
+
+                <br><br>
+                
+                <label for="artistas">Artistas</label>
+                <br><input type="checkbox">Cardy B
+                <br><input type="checkbox">Macano
+                <br><input type="checkbox">X
+                <br><input type="checkbox">X2
+                <br><input type="checkbox">X3
+                <br><input type="checkbox">X4
+
+                <br><br>
+
+                <label for="genero">Genero</label>
+                <br><input type="radio">Tango
+                <br><input type="radio">Los Turros
+                <br><input type="radio">Merengue
+                <br><input type="radio">Salsa
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentarios </legend>
+                <label for="comentarios"> Deje aquí sus comentarios</label>
+                <br><textarea name="" id="" cols="30" rows="10"></textarea>
+            </fieldset>
+        </form>
     </main>
     <footer>
-        Esto el footer
+        Desarrollado por 
     </footer>
 </body>
 <script src="assets/js/script.js"></script>
