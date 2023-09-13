@@ -101,3 +101,118 @@ text-align: left;
 .videos {}
 
 .spotify {}
+  background-color: lightgoldenrodyellow;
+}
+nav {
+  height: 2em;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+nav li {
+  padding: 10px 5px;
+  display: inline-block;
+  float: left;
+}
+
+nav a {
+  padding: 10px 5px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5em;
+  text-align: center;
+  color: black;
+}
+
+nav li a:hover {
+  color: lightgoldenrodyellow;
+}
+
+.nav-logo {
+  float: left;
+}
+.nav-logo img {
+  width: 5em;
+}
+
+.nav-menu {
+  padding-left: 50px;
+  float: left;
+  font-size: 10px;
+}
+
+.active {
+  background-color: goldenrod;
+}
+
+.nav-menu li {
+  transition: background-color 0.75s ease;
+}
+
+.nav-menu li:hover {
+  background-color: goldenrod;
+}
+
+.nav-social {
+  float: right;
+}
+
+.nav-social img {
+  width: 0.8em;
+}
+
+.bar-start {
+}
+
+.bar-info {
+  background-color: darkgoldenrod;
+  color: whitesmoke;
+}
+
+.container {
+}
+
+.bar-h1 {
+}
+
+.bar-h2 {
+}
+
+.bar-h3 {
+}
+
+.shows {
+}
+
+.shows-h1 {
+}
+
+.shows-h2 {
+}
+
+.shows-h3 {
+}
+
+.shows-h4 {
+}
+
+.info {
+}
+
+.photos {
+}
+
+.videos {
+}
+
+.spotify {
+}
