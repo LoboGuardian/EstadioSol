@@ -4,6 +4,10 @@
 nav {
   height: 2em;
 }
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+}
 
 nav ul {
   list-style-type: none;
@@ -59,6 +63,7 @@ nav li a:hover {
 .nav-social {
   float: right;
 }
+
 .nav-social img {
   width: 0.8em;
 }
