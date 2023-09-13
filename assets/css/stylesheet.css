@@ -1,129 +1,103 @@
-:root{
+:root {
     background-color: lightgoldenrodyellow;
 }
+
 nav{
-    height: 2em;
-    
+    width: 95%;
+    max-width: 100%;
+    margin: 20px auto;
 
 }
 
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    z-index: 100;
-}
-nav li{
-    padding: 10px 5px;
-    display: inline-block;
+
+.nav-logo {
     float: left;
-    
+list-style-type: none;
+margin-top: 0px;
+text-align: left;
 }
 
-nav a{
-    padding: 10px 5px;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 1.5em;
-    text-align: center;
-    color:black;
-
-}
-
-nav li a:hover{
-    background-color:goldenrod;
-    color: lightgoldenrodyellow;
-
-}
-
-
-.nav-logo{
-    float: left;
-    
-
-
-}
-.nav-logo img{
+.nav-logo img {
     width: 5em;
 }
 
-.nav-menu{
+
+.nav-menu {
+    margin-top: 15px;
     padding-left: 50px;
-    float: left;
     font-size: 10px;
-    
+    display: inline;
+    text-align: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu li {
+    border-right: #c77d21 1px solid;
+    padding: 10px 5px;
+    font-size: 1.5em;
+    display: inline-block;
+    text-align: center;
+}
+
+.nav-menu li a:hover {
+    background-color: goldenrod;
+    color: lightgoldenrodyellow;
+  
 }
 
 
-.nav-social{
-    float: right;
-    
-    
+.nav-social {    
+    display: inline;
+    text-align: right;
 
 }
-.nav-social img{
+
+
+.nav-social li {
+    padding: 1px 3px;    
+    font-size: 1.3em;
+    display: inline-block;
+}
+
+.nav-social img {
     width: 0.8em;
 }
 
-.bar-start{
-    
-       
 
-}
 
-.bar-info{
+.bar-start {}
+
+.bar-info {
     background-color: darkgoldenrod;
     color: whitesmoke;
 }
 
-.container{
+.container {}
 
-}
+.bar-h1 {}
 
-.bar-h1{
+.bar-h2 {}
 
-}
+.bar-h3 {}
 
-.bar-h2{
+.shows {}
 
-}
+.shows-h1 {}
 
-.bar-h3{
+.shows-h2 {}
 
-}
+.shows-h3 {}
 
-.shows{
+.shows-h4 {}
 
-}
+.info {}
 
-.shows-h1{
+.photos {}
 
-}
+.videos {}
 
-.shows-h2{
-
-}
-
-.shows-h3{
-
-}
-
-.shows-h4{
-
-}
-
-.info{
-
-}
-
-.photos{
-
-}
-
-.videos{
-
-}
-
-.spotify{
-}
+.spotify {}
