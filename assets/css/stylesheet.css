@@ -2,33 +2,26 @@
     background-color: lightgoldenrodyellow;
 }
 
-nav{
-    width: 95%;
-    max-width: 100%;
-    margin: 20px auto;
-
+nav{   
+    height: 2em;
 }
 
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
 
 .nav-logo {
-    float: left;
-list-style-type: none;
-margin-top: 0px;
-text-align: left;
-}
+    list-style-type: none;}
 
 .nav-logo img {
     width: 5em;
 }
 
-
-.nav-menu {
-    margin-top: 15px;
-    padding-left: 50px;
-    font-size: 10px;
-    display: inline;
-    text-align: center;
-}
+.active {
+    background-color: goldenrod;
+  }
 
 .nav-menu a {
     text-decoration: none;
@@ -36,26 +29,20 @@ text-align: left;
 }
 
 .nav-menu li {
+    list-style-type: none;
     border-right: #c77d21 1px solid;
     padding: 10px 5px;
-    font-size: 1.5em;
-    display: inline-block;
-    text-align: center;
+    font-size: 1em;
+    display: inline-block;      
+    transition: background-color 0.75s ease;    
 }
+
 
 .nav-menu li a:hover {
     background-color: goldenrod;
     color: lightgoldenrodyellow;
   
 }
-
-
-.nav-social {    
-    display: inline;
-    text-align: right;
-
-}
-
 
 .nav-social li {
     padding: 1px 3px;    
@@ -68,8 +55,9 @@ text-align: left;
 }
 
 
-
-.bar-start {}
+.bar-start {
+    
+}
 
 .bar-info {
     background-color: darkgoldenrod;
@@ -102,116 +90,6 @@ text-align: left;
 
 .spotify {}
   
-nav {
-  height: 2em;
-}
-.nav-bar{
-    display: flex;
-    justify-content: space-between;
-}
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  z-index: 100;
-}
-nav li {
-  padding: 10px 5px;
-  display: inline-block;
-  float: left;
-}
 
-nav a {
-  padding: 10px 5px;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 1.5em;
-  text-align: center;
-  color: black;
-}
 
-nav li a:hover {
-  color: lightgoldenrodyellow;
-}
-
-.nav-logo {
-  float: left;
-}
-.nav-logo img {
-  width: 5em;
-}
-
-.nav-menu {
-  padding-left: 50px;
-  float: left;
-  font-size: 10px;
-}
-
-.active {
-  background-color: goldenrod;
-}
-
-.nav-menu li {
-  transition: background-color 0.75s ease;
-}
-
-.nav-menu li:hover {
-  background-color: goldenrod;
-}
-
-.nav-social {
-  float: right;
-}
-
-.nav-social img {
-  width: 0.8em;
-}
-
-.bar-start {
-}
-
-.bar-info {
-  background-color: darkgoldenrod;
-  color: whitesmoke;
-}
-
-.container {
-}
-
-.bar-h1 {
-}
-
-.bar-h2 {
-}
-
-.bar-h3 {
-}
-
-.shows {
-}
-
-.shows-h1 {
-}
-
-.shows-h2 {
-}
-
-.shows-h3 {
-}
-
-.shows-h4 {
-}
-
-.info {
-}
-
-.photos {
-}
-
-.videos {
-}
-
-.spotify {
-}
