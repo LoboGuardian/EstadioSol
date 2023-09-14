@@ -148,71 +148,74 @@
             <legend><h2 class="titulos">Datos del comprador:</h2></legend>
 
             <!-- Nombre -->
-            <label for="nombre">Nombre: </label>
-            <input
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Ingrese su nombre..."
-              required
-            />
-            <br /><br />
-
+            <p>
+              <label for="nombre">Nombre: </label>
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                placeholder="Ingrese su nombre..."
+                required
+              />
+            </p>
             <!-- Apellido -->
-            <label for="apellido">Apellido: </label>
-            <input
-              type="text"
-              name="apellido"
-              id="apellido"
-              placeholder="Ingrese su apellido..."
-              required
-            />
-            <br /><br />
-
+            <p>
+              <label for="apellido">Apellido: </label>
+              <input
+                type="text"
+                name="apellido"
+                id="apellido"
+                placeholder="Ingrese su apellido..."
+                required
+              />
+            </p>
             <!-- DNI -->
-            <label for="dni">DNI: </label>
-            <input
-              type="number"
-              name="dni"
-              id="dni"
-              placeholder="Ingrese su DNI..."
-              maxlength="5"
-            />
-            <br /><br />
-
-            <!-- Apellido -->
-            <label for="fecnac">Fecha de Concierto: </label>
-            <input type="date" name="fecnac" id="fecnac" required />
-
-            <br /><br />
+            <p>
+              <label for="dni">DNI: </label>
+              <input
+                type="number"
+                name="dni"
+                id="dni"
+                placeholder="Ingrese su DNI..."
+                min="0"
+                required
+              />
+            </p>
+            <!-- Fecha -->
+            <p>
+              <label for="fecnac">Fecha de Concierto: </label>
+              <input type="date" name="fecnac" id="fecnac" required />
+            </p>
 
             <!-- Correo -->
-            <label for="mail">Correo: </label>
-            <input
-              type="mail"
-              name="Correo"
-              id="Correo"
-              placeholder="Ingrese su Correo..."
-              required
-            />
-            <br /><br />
+            <p>
+              <label for="correo">Correo: </label>
+              <input
+                type="email"
+                name="correo"
+                id="correo"
+                placeholder="Ingrese su correo..."
+                required
+              />
+            </p>
 
             <!-- Codigo -->
-            <label for="password">Codigo Movil: </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Ingrese el codigo movil..."
-              required
-            />
-            <br /><br />
+            <p>
+              <label for="password">Codigo Movil: </label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Ingrese el codigo movil..."
+                required
+              />
+            </p>
           </fieldset>
           <fieldset>
             <legend>Datos para validación</legend>
             <label for="horario">Horario</label>
             <select name="horario" id="horario">
-              <option value="0"></option>
+              <option value=""></option>
               <option value="1">9PM</option>
               <option value="2">10PM</option>
               <option value="3">11PM</option>
@@ -220,37 +223,24 @@
               <option value="5">4AM</option>
             </select>
 
+            <!-- Aquí puedes agregar los nombres de los artistas -->
+            <!-- Artistas -->
             <br /><br />
 
-            <label for="artistas">Artistas</label>
-            <br /><input type="checkbox" name="artistas" id="A" />Cardy B
-            <br /><input type="checkbox" name="artistas" id="B" />Macano
-            <br /><input type="checkbox" name="artistas" id="C" />X <br /><input
-              type="checkbox"
-              name="artistas"
-              id="D"
-            />X2 <br /><input type="checkbox" name="artistas" id="F" />X3
-            <br /><input type="checkbox" name="artistas" id="G" />X4
+            <label for="artistas">Artistas</label><br />
 
-            <br /><br />
-
-            <label for="genero">Genero</label>
-            <br /><input type="radio" name="genero" id="A1" />Tango <br /><input
-              type="radio"
-              name="genero"
-              id="B1"
-            />Los Turros <br /><input
-              type="radio"
-              name="genero"
-              id="C1"
-            />Merengue <br /><input type="radio" name="genero" id="D1" />Salsa
+            <!-- Aquí puedes agregar los nombres de los géneros -->
+            <!-- Genero -->
           </fieldset>
 
+          <!-- Comentarios -->
           <fieldset>
             <legend>Comentarios</legend>
-            <label for="comentarios"> Deje aquí sus comentarios</label>
-            <br /><textarea name="" id="" cols="30" rows="10"></textarea>
+            <label for="comentarios"> Deje aquí sus comentarios</label><br />
           </fieldset>
+
+          <!-- Botón de envío -->
+          <button type="submit">Enviar</button>
         </form>
       </section>
     </main>
