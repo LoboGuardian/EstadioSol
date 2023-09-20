@@ -6,6 +6,31 @@ nav{
     height: 2em;
 }
 
+/*ubicación del checbox y los iconos de menu uno encima del otro*/
+.nav-bar input[type="checkbox"], .nav-bar .fa-bars, .nav-bar .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+  }
+  /*Tamaño de los iconos y que no se vean*/
+  .nav-bar .fa-bars, .nav-bar .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+    display:none;
+  }
+
+  .nav-bar input[type="checkbox"] {
+    opacity: 0;
+  }
+
+
+
+
 .nav-bar{
     display: flex;
     justify-content: space-between;
@@ -92,4 +117,37 @@ nav{
   
 
 
+/* MENU en pantallas pequeñas
+Falta hacer el menú en columna
+Agregar las redes en la última línea
+Hacerlo desplegable
+*/
 
+@media (max-width: 700px){
+
+  .nav-bar .fa-bars, .nav-bar .fa-times {
+      display: block;
+  }
+  
+    .nav-bar input:checked ~ nav {
+      display: block;
+    }
+    
+    .nav-bar input:checked ~ .fa-bars {
+      display: none;
+    }
+    
+    .nav-bar input:not(:checked) ~ .fa-times {
+      display: none;
+    }
+  
+    .nav-bar input:not(:checked) ~ .nav-menu, .nav-social {
+      display: none;
+    }
+    .nav-bar input::checked ~ .nav-menu, .nav-social {
+      display: flex;
+      flex-direction: column
+    }
+  
+  }
+  
