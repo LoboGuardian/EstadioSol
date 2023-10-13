@@ -1,3 +1,5 @@
+//DETECTAR LA PAGINA ACTIVA (hay efecto en css)
+
 // Conseguir la URL actual
 var url = window.location.href;
 
@@ -18,9 +20,26 @@ for (var i = 0; i < links.length; i++) {
   }
 }
 
-// script.js
 
-// Función para validar el formulario
+//APARECER/DESAPARECER EL MENU HAMBURGUESA (nav-menu y nav-social)
+const navMenu = document.querySelector("#navMenu");
+const navSocial = document.querySelector("#navSocial");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
+
+abrir.addEventListener("click",()=>{
+    navMenu.classList.add("visible");
+    navSocial.classList.add("visible");
+})
+cerrar.addEventListener("click",()=>{
+    navMenu.classList.remove("visible");
+    navSocial.classList.remove("visible");
+})
+
+
+
+
+//VALIDACIONES DEL FORMULARIO
 function validarFormulario() {
   var nombre = document.getElementById("nombre").value;
   var apellido = document.getElementById("apellido").value;
