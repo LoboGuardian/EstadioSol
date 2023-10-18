@@ -84,7 +84,14 @@
     color: whitesmoke;
 }
 
-.container {}
+.container {
+  display: flex;
+  flex-direction: row 
+}
+
+.bar {
+ 
+}
 
 .bar-h1 {}
 
