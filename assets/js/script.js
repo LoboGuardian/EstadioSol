@@ -36,6 +36,11 @@ cerrar.addEventListener("click",()=>{
     navSocial.classList.remove("visible");
 })
 
+const section = document.querySelector(".bar-start");
+
+button.addEventListener("click", () => {
+  section.classList.toggle("active");
+});
 
 
 

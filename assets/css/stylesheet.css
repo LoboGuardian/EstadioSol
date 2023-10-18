@@ -1,3 +1,8 @@
+/*
+Esta hoja de estilo define el diseño de la página web.
+*/
+
+/* Estilos de toda la pag */
 :root {
     background-color: lightgoldenrodyellow;
 }
@@ -10,9 +15,43 @@
   font-family: sans-serif;
 }
 
-/*Estilos del NAV*/
+/*
+El elemento `header` contiene el logotipo y el menú de navegación.
+*/
+header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/*
+El elemento `video` contiene el vídeo de fondo.
+*/
+video {
+  margin: none;
+  padding: 0;
+  box-sizing: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 35vh;
+  overflow: visible; 
+  position: absolute;
+  object-fit: cover;
+}
+
+/* Estilos del NAV */
 .abrir-menu,
 .cerrar-menu{
+    /*
+    Los botones `abrir-menu` y `cerrar-menu` solo son visibles en pantallas pequeñas.
+    Cuando se hace clic en el botón `abrir-menu`, se muestra el menú de navegación.
+  */
   display: none;
   background-color: transparent;
   position: absolute;
@@ -31,6 +70,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-grow: 1;
+    position: relative;
+    top: 0;
   }
 
 .nav-logo {
@@ -74,11 +116,41 @@
   width: 0.8em;
 }
 
+main{
 
-.bar-start {
-    
 }
 
+.bar-start {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: lightblue;
+}
+
+section.bar-start {
+  display: none;
+}
+
+section.bar-start.active {
+  display: block;
+}
+
+.btn-show-bar {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.btn-show-bar:hover {
+  background-color: lightblue;
+}
+
+.btn-show-bar:active {
+  background-color: darkblue;
+}
 .bar-info {
     background-color: darkgoldenrod;
     color: whitesmoke;

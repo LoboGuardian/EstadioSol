@@ -1,0 +1,101 @@
+<section class="forms">
+    <form action="">
+      <fieldset>
+        <legend><h2 class="titulos">Datos del comprador:</h2></legend>
+
+        <!-- Nombre -->
+        <p>
+          <label for="nombre">Nombre: </label>
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Ingrese su nombre..."
+            required
+          />
+        </p>
+        <!-- Apellido -->
+        <p>
+          <label for="apellido">Apellido: </label>
+          <input
+            type="text"
+            name="apellido"
+            id="apellido"
+            placeholder="Ingrese su apellido..."
+            required
+          />
+        </p>
+        <!-- DNI -->
+        <p>
+          <label for="dni">DNI: </label>
+          <input
+            type="number"
+            name="dni"
+            id="dni"
+            placeholder="Ingrese su DNI..."
+            min="0"
+            required
+          />
+        </p>
+        <!-- Fecha -->
+        <p>
+          <label for="fecnac">Fecha de Concierto: </label>
+          <input type="date" name="fecnac" id="fecnac" required />
+        </p>
+
+        <!-- Correo -->
+        <p>
+          <label for="correo">Correo: </label>
+          <input
+            type="email"
+            name="correo"
+            id="correo"
+            placeholder="Ingrese su correo..."
+            required
+          />
+        </p>
+
+        <!-- Codigo -->
+        <p>
+          <label for="password">Codigo Movil: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Ingrese el codigo movil..."
+            required
+          />
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Datos para validación</legend>
+        <label for="horario">Horario</label>
+        <select name="horario" id="horario">
+          <option value=""></option>
+          <option value="1">9PM</option>
+          <option value="2">10PM</option>
+          <option value="3">11PM</option>
+          <option value="4">12PM</option>
+          <option value="5">4AM</option>
+        </select>
+
+        <!-- Aquí puedes agregar los nombres de los artistas -->
+        <!-- Artistas -->
+        <br /><br />
+
+        <label for="artistas">Artistas</label><br />
+
+        <!-- Aquí puedes agregar los nombres de los géneros -->
+        <!-- Genero -->
+      </fieldset>
+
+      <!-- Comentarios -->
+      <fieldset>
+        <legend>Comentarios</legend>
+        <label for="comentarios"> Deje aquí sus comentarios</label><br />
+      </fieldset>
+
+      <!-- Botón de envío -->
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
