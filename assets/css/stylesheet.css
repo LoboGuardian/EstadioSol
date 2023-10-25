@@ -11,7 +11,6 @@ Esta hoja de estilo define el diseño de la página web.
 *{
   margin: 0;
   padding: .5rem;
-  box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -24,9 +23,11 @@ header {
   position: relative;
 }
 
+
 /*
 El elemento `video` contiene el vídeo de fondo.
 */
+
 video {
   margin: none;
   padding: 0;
@@ -44,6 +45,7 @@ video {
   position: absolute;
   object-fit: cover;
 }
+
 
 /* Estilos del NAV */
 .abrir-menu,
@@ -98,27 +100,38 @@ video {
     transition: background-color 0.75s ease;    
 }
 
+.nav-menu li:hover{
+  transform: scale(1.5);
+    transition: transform 0.5s;
+}
 .nav-menu li a:hover {
     background-color: goldenrod;
     color: lightgoldenrodyellow;
+  
   
 }
 .active { /*Colorsito diferente para pagina activa del nav-menu*/
   background-color: goldenrod;
 }
 
+.nav-social{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 33%;  
+}
 .nav-social li {
   list-style-type: none;
-  
+     
 }
-
+.nav-social a:hover{
+  transform: rotate(360deg) scale(1.8);
+    transition: transform 0.4s;
+}
 .nav-social img {
-  width: 0.8em;
+  width: 1em;
 }
 
-main{
-
-}
 
 .bar-start {
   width: 100%;
@@ -161,40 +174,73 @@ section.bar-start.active {
   flex-direction: row 
 }
 
-.bar {
- 
+.shows{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: rgba(255, 255, 255, 0.258);
+  
+
 }
 
-.bar-h1 {}
+.tarjeta{
+  width: 18rem; 
+  border: 1px solid rgba(0,0,0,.125); 
+  border-radius: .50rem;
+  background-color: #c77d21;
+  margin: 2%;
 
-.bar-h2 {}
+}
+.tarjeta img{
+  width: 100%; 
+  border-top-left-radius: .25rem; 
+  border-top-right-radius: .25rem;
+}
+.tarjeta-texto{
+  padding: 1.25rem;
+}
 
-.bar-h3 {}
+.img-promo{
+  height: 5em;
+  width: 5em;
+}
+.container-footer{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+list-style-type: none;
+}
+.footer-l3{
+  text-align: center;
+}
 
-.shows {}
+/*Estilo de iFrame*/
+.mapouter {
+  position: relative;
+  text-align: right;
+}
 
-.shows-h1 {}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 90%;
+}
+.maps{
+  display: flex;
+  flex-direction: row;
+  background-color: #c77d21;
+  border-radius: 3%;
+}
+.transporte{
+  background-color: rgba(250, 235, 215, 0.689);
+  border-radius: 2%;
+  height: 30%;
+  margin-top: 2%;
 
-.shows-h2 {}
+}
 
-.shows-h3 {}
-
-.shows-h4 {}
-
-.info {}
-
-.photos {}
-
-.videos {}
-
-.spotify {}
-  
 
 
 @media screen and (max-width: 550px){
-
-  /*FALTA PONER EL NAV SOCIAL EN EL MENU VISIBLE*/ 
-
   .abrir-menu,
   .cerrar-menu{
       display: block;  
@@ -208,13 +254,12 @@ section.bar-start.active {
     /* las dos primeras ocultan la nav */
     display: flex;
     flex-direction: column;
-    align-items: end;
     gap: 2rem;
     position: absolute;
     top: 0;
     right: 0;
     padding: 2rem;
-    background-color: rgb(35, 170, 170);
+    background-color:#c77d21;
     bottom: 01;
     box-shadow: 0 0 0 100vmax rgba(189, 5, 5, 0.877);
     z-index: 2;

@@ -9,64 +9,36 @@
 </head>
 <body>
     <header>
-        <nav class="nav-bar">
-          <ul class="nav-logo">
-                <li><img src="assets/img/Logo.png" alt="Estadio sol" /></li>
-            </ul>
-            <ul class="nav-menu">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./direccion.html">¿Cómo llegar?</a></li>
-                <li><a href="./multimedia.html">Multimedia</a></li>
-                <li><a href="./question.html">Preguntas Frecuentes</a></li>
-                <li><a href="./contact.html">Contacto</a></li>
-            </ul>
-            <ul class="nav-social">
-                <li>
-                    <a href="www.facebook.com.ar"
-                      ><img src="assets/favicon/fb.ico" alt="Fb" /><i
-                        class="facebook"
-                      ></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="www.twitter.com"
-                      ><img src="assets/favicon/tw.ico" alt="Tw" /><i
-                        class="twitter"
-                      ></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="www.instagram.com"
-                      ><img src="assets/favicon/ig.ico" alt="Ig" /><i
-                        class="instagram"
-                      ></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img src="assets/favicon/search.ico" alt="search" /><i
-                        class="search"
-                      ></i
-                    ></a>
-                  </li>
-            </ul>
+      <nav class="nav-bar">
+        <button id="abrir" class="abrir-menu"><i class="fas fa-bars"></i></button>
+        <ul class="nav-logo">
+          <li><img src="assets/img/Logo.png" alt="Estadio sol" /></li>
         </ul>
-    </nav>
+        <ul id="navMenu" class="nav-menu">
+          <button id="cerrar" class="cerrar-menu"><i class="fas fa-times"></i></button>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./direccion.html">¿Cómo llegar?</a></li>
+          <li><a href="./multimedia.html">Multimedia</a></li>
+          <li><a href="./question.html">Preguntas Frecuentes</a></li>
+          <li><a href="./contact.html">Contacto</a></li>
+        </ul>
+        <ul id="navSocial" class="nav-social">
+          <a href="www.facebook.com.ar"><img src="assets/favicon/fb.ico" alt="Fb" />
+          </a>
+          <a href="www.twitter.com"><img src="assets/favicon/tw.ico" alt="Tw" />
+          </a>
+          <a href="www.instagram.com"><img src="assets/favicon/ig.ico" alt="Ig" />
+          </a>
+          <a href="#"><img src="assets/favicon/search.ico" alt="search" />
+          </a>
+        </ul>
+      </nav>
   </header>
     <main>
         <section class="bar-start">
             Contacto
         </section>
-        <section>
-            Nombre t apellido
-            Mail
-            Mail
-            Telefono
-            Consulta
-
-            BOTON enviar
-        </section>
-        <section class="forms">
+             <section class="forms">
             <form action="">
                 <fieldset>
                     <legend><h2 class="titulos">Datos del comprador:</h2></legend>
@@ -143,30 +115,25 @@
                     <label for="comentarios"> Deje aquí sus comentarios</label>
                     <br><textarea name="" id="" cols="30" rows="10"></textarea>
                 </fieldset>
+                <button type="submit" class="btn-enviar">ENVIAR</button>
             </form>
         </section>
     </main>
     <footer>
-        <div class="container-footer">
-            <div class="footer-l1">
-                <ul>
-                    <li>Inicio</li>
-                    <li>Donde comprar</li>
-                    <li>Próximos shows</li>
-                </ul>
-            </div>
-            <div class="footer-l2">
-                <ul>
-                    <li>¿Cómo llegar?</li>
-                    <li>Dirección</li>
-                    <li>Lineas de colectivo</li>
-                </ul>
-            </div>
-            <div class="footer-l2">
-                Desarrollado por Equipo #9 Full Stack Python Codo A Codo
-            </div>
+        <div >   
+            <ul class="container-footer">
+              <li>Inicio</li>
+              <li>Donde comprar</li>
+              <li>Próximos shows</li>
+              <li>¿Cómo llegar?</li>
+              <li>Dirección</li>
+              <li>Lineas de colectivo</li>
+            </ul>
         </div>
-    </footer>
+        <div class="footer-l3">
+          Desarrollado por Equipo #9 Full Stack Python Codo A Codo
+        </div>
+      </footer>
 </body>
 <script src="assets/js/script.js"></script>
 </html>
