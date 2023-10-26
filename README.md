@@ -3,6 +3,8 @@ Pagina Web del Estadio Sol. Donde ofrecemos boletería de distintas bandas music
 
 Desplegado en Netlify
 https://estadiosol.netlify.app/
+Desplegado en Github Pages
+https://loboguardian.github.io/EstadioSol/
 
  - HTML
  - CSS
