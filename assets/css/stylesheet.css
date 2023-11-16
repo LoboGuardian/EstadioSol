@@ -4,7 +4,7 @@ Esta hoja de estilo define el diseño de la página web.
 
 /* Estilos de toda la pag */
 :root {
-    background-color: lightgoldenrodyellow;
+    background-color: #000020;
 }
 
 /*Estilo de toda la pag*/
@@ -39,10 +39,9 @@ video {
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
-  height: auto;
-  min-height: 35vh;
-  overflow: visible; 
-  position: absolute;
+  height: 0;
+  min-height: 0vh;
+  overflow: visible;  
   object-fit: cover;
 }
 
@@ -88,7 +87,7 @@ video {
 
 .nav-menu a {
     text-decoration: none;
-    color: black;
+    color: #5dc1b9;
 }
 
 .nav-menu li {
@@ -165,7 +164,7 @@ section.bar-start.active {
   background-color: darkblue;
 }
 .bar-info {
-    background-color: darkgoldenrod;
+    background-color: #000020;
     color: whitesmoke;
 }
 
@@ -177,26 +176,39 @@ section.bar-start.active {
 .shows{
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: rgba(255, 255, 255, 0.258);
-  
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 10px;
 
-}
+  }
 
 .tarjeta{
   width: 18rem; 
   border: 1px solid rgba(0,0,0,.125); 
   border-radius: .50rem;
-  background-color: #c77d21;
+  background-color: #3F0071;
   margin: 2%;
 
 }
 .tarjeta img{
   width: 100%; 
+  max-height: 40%;
   border-top-left-radius: .25rem; 
   border-top-right-radius: .25rem;
+  padding: initial;
 }
 .tarjeta-texto{
   padding: 1.25rem;
+
+}
+
+.tarjeta btn-mas-info{
+  float: right;
+  
+ 
+}
+.tarjeta h3{
+  text-align: center;
 }
 
 .img-promo{
@@ -208,9 +220,11 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 list-style-type: none;
+color:#5dc1b9;
 }
 .footer-l3{
   text-align: center;
+  color: #5dc1b9;
 }
 
 /*Estilo de iFrame*/
