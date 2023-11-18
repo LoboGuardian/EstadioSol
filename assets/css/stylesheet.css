@@ -4,7 +4,8 @@ Esta hoja de estilo define el diseño de la página web.
 
 /* Estilos de toda la pag */
 :root {
-    background-color: #000020;
+    background-color: #030526;
+    color: #5dc1b9;
 }
 
 /*Estilo de toda la pag*/
@@ -78,8 +79,17 @@ video {
 
 .nav-logo {
   list-style-type: none;
-    align-items: left;
+    align-items: left;  
   }
+/* Estilo del logo redondeado */
+.nav-logo div{
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
 
 .nav-logo img {
     width: 5em;
@@ -92,7 +102,7 @@ video {
 
 .nav-menu li {
     list-style-type: none;
-    border-right: #c77d21 1px solid;
+    border-right: #065473 1px solid;
     padding: 10px 5px;
     font-size: 1em;
     display: inline-block;      
@@ -100,17 +110,17 @@ video {
 }
 
 .nav-menu li:hover{
-  transform: scale(1.5);
+  transform: scale(1.2);
     transition: transform 0.5s;
 }
 .nav-menu li a:hover {
-    background-color: goldenrod;
-    color: lightgoldenrodyellow;
+    background-color: #065473;
+    color: #5dc1b9;
   
   
 }
 .active { /*Colorsito diferente para pagina activa del nav-menu*/
-  background-color: goldenrod;
+  background-color: #065473;
 }
 
 .nav-social{
@@ -163,17 +173,28 @@ section.bar-start.active {
 .btn-show-bar:active {
   background-color: darkblue;
 }
-.bar-info {
-    background-color: #000020;
-    color: whitesmoke;
-}
 
-.container {
+.container-bar {
+  background-color: #590202;
+  color: #F26716; 
   display: flex;
-  flex-direction: row 
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+ padding: 0;
+ margin-top:10em;  
+ margin-bottom: 0;
 }
 
-.shows{
+.shows .titulo-shows{
+margin-top: 100px;
+  color: #5dc1b9;
+font-family: fantasy;
+}
+
+.shows .tarjetas{
+  margin-top: 30px;
+  color: black;
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: center;
@@ -186,7 +207,7 @@ section.bar-start.active {
   width: 18rem; 
   border: 1px solid rgba(0,0,0,.125); 
   border-radius: .50rem;
-  background-color: #3F0071;
+  background-color: #F2421B;
   margin: 2%;
 
 }
@@ -216,6 +237,7 @@ section.bar-start.active {
   width: 5em;
 }
 .container-footer{
+  margin-top: 100px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -227,30 +249,6 @@ color:#5dc1b9;
   color: #5dc1b9;
 }
 
-/*Estilo de iFrame*/
-.mapouter {
-  position: relative;
-  text-align: right;
-}
-
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  width: 90%;
-}
-.maps{
-  display: flex;
-  flex-direction: row;
-  background-color: #c77d21;
-  border-radius: 3%;
-}
-.transporte{
-  background-color: rgba(250, 235, 215, 0.689);
-  border-radius: 2%;
-  height: 30%;
-  margin-top: 2%;
-
-}
 
 
 

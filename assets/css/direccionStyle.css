@@ -1,0 +1,35 @@
+/*direccion.html CSS*/
+
+.info{
+    margin-top: 50px;
+    color: #5dc1b9;
+}
+
+/*Estilo de iFrame*/
+.mapouter {
+    position: relative;
+    text-align: right;
+  }
+  
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 90%;
+  }
+  .maps{
+    margin-top: 50px;   
+    display: flex;
+    flex-direction: row;
+    background-color: #590202;
+    border-radius: 3%;
+    
+  }
+  .transporte{
+    background-color: #F26716;
+    color: black;
+    border-radius: 2%;
+    height: 30%;
+    margin-top: 2%;
+  
+  }
+  
