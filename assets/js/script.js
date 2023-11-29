@@ -18,8 +18,6 @@ for (var i = 0; i < links.length; i++) {
   }
 }
 
-// script.js
-
 // Función para validar el formulario
 function validarFormulario() {
   var nombre = document.getElementById("nombre").value;
@@ -30,11 +28,11 @@ function validarFormulario() {
 
   // Validar que los campos no estén vacíos
   if (
-    nombre == "" ||
-    apellido == "" ||
-    dni == "" ||
-    correo == "" ||
-    password == ""
+    nombre.trim() == "" ||
+    apellido.trim() == "" ||
+    dni.trim() == "" ||
+    correo.trim() == "" ||
+    password.trim() == ""
   ) {
     alert("Todos los campos son obligatorios.");
     return false;
@@ -75,11 +73,29 @@ function validarFormulario() {
   return confirmacion;
 }
 
+// Función para enviar el correo electrónico
+function enviarCorreo() {
+  console.log("Entra a enviar correo");
+  var correo = document.getElementById("correo").value;
+
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "testpython899@gmail.com",
+    Password: "54N;HtHcV!Sij&!",
+    To: correo,
+    From: "testpython899@gmail.com",
+    Subject: "Confirmación de compra de entradas",
+    Body: "Gracias por tu compra. Te esperamos en el concierto.",
+  }).then((message) => alert("Correo enviado exitosamente"));
+}
+
 // Asignar la función de validación al evento de envío del formulario
 document.querySelector("form").addEventListener("submit", function (event) {
+  console.log("Entra a validar formulario");
   event.preventDefault();
 
   if (validarFormulario()) {
+    enviarCorreo();
     this.submit();
   }
 });
