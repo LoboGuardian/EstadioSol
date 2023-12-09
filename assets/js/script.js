@@ -44,8 +44,6 @@ if (button) {
   });
 }
 
-
-
 //VALIDACIONES DEL FORMULARIO
 function validarFormulario() {
   let nombre = document.getElementById("nombre").value;
@@ -53,7 +51,7 @@ function validarFormulario() {
   let dni = document.getElementById("dni").value;
   let correo = document.getElementById("correo").value;
   let password = document.getElementById("password").value;
-  
+
   //Validar que los campos no estén vacíos
   if (
     nombre.trim() == "" ||
@@ -96,7 +94,7 @@ function validarFormulario() {
       "\n\n" +
       "¿Son correctos estos datos?"
   );
-  return confirmacion;   // Si el usuario acepta, se envía el formulario
+  return confirmacion; // Si el usuario acepta, se envía el formulario
 }
 
 /* Asignar la función de validación al evento de envío del formulario
@@ -108,7 +106,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
   }
 });
 */
-
 
 function enviarCorreo() {
   console.log("Entra a enviar correo");
@@ -192,8 +189,9 @@ fetch("https://rickandmortyapi.com/api/character")
 
       fragment.appendChild(characterContainer);
     });
-
-    container.appendChild(fragment);
+    if (container !== null) {
+      container.appendChild(fragment);
+    }
   })
   .catch((error) => console.error("Error:", error));
 
@@ -202,6 +200,8 @@ let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 let i = 0;
 
 setInterval(function () {
-  h2.style.color = colors[i];
-  i = (i + 1) % colors.length;
+  if (h2 !== null) {
+    h2.style.color = colors[i];
+    i = (i + 1) % colors.length;
+  }
 }, 500);
