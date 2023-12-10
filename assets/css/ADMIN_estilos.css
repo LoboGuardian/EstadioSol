@@ -1,8 +1,4 @@
 /* Estilos para todo el proyecto */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-}
 
 .contenedor-centrado {
     display:flex;
@@ -20,10 +16,10 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #007bff;
+   
 }
 
-form {
+.form_listar, .form_modificar, .form_guardar{
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -83,7 +79,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-a {
+table a {
     padding: 8px;
     margin:4px;
     background-color: #fdab13;
