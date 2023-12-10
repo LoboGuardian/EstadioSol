@@ -243,8 +243,13 @@ document
     }
 
     let user = prompt("Usuario:");
+    if (!user) {
+      return;
+    }
     let password = prompt("Contraseña:");
-
+    if (!password) {
+      return;
+    }
     let shaObj = new jsSHA("SHA-256", "TEXT");
     shaObj.update(user);
     let hashUser = shaObj.getHash("HEX");
