@@ -159,7 +159,7 @@ video {
 
 
 /*Estilo de la sección de SHOWS*/
-.shows .titulo-shows {
+.shows .titulo-shows, .opiniones .titulo-opiniones {
   color: #5dc1b9;
   font-family: fantasy;
 }
@@ -252,39 +252,7 @@ video {
 }
 
 
-
-/*Estilo de MULTIMEDIA*/
-.bar-start {
-  width: 100%;
-  height: auto;
-  padding: 2rem;
-  text-align: center;
-  background-color: lightblue;
-}
-
-section.bar-start {
-  display: none;
-}
-
-section.bar-start.active {
-  display: block;
-}
-
-.btn-show-bar {
-  cursor: pointer;
-  background-color: blue;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-}
-
-.btn-show-bar:hover {
-  background-color: lightblue;
-}
-
-.btn-show-bar:active {
-  background-color: darkblue;
-}
+/*Diseño de las opiniones*/
 #container_reviews {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -347,6 +315,41 @@ section.bar-start.active {
     background-position: 0% 50%;
   }
 }
+
+
+/*Estilo de MULTIMEDIA*/
+.bar-start {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: lightblue;
+}
+
+section.bar-start {
+  display: none;
+}
+
+section.bar-start.active {
+  display: block;
+}
+
+.btn-show-bar {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.btn-show-bar:hover {
+  background-color: lightblue;
+}
+
+.btn-show-bar:active {
+  background-color: darkblue;
+}
+
 
 .form-grid {
   display: grid;

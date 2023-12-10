@@ -133,6 +133,9 @@ if (form) {
     }
   });
 }
+
+
+//API OPINIONES
 let container = document.getElementById("container_reviews");
 fetch("https://rickandmortyapi.com/api/character")
   .then((response) => response.json())
