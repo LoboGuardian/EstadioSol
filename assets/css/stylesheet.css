@@ -133,10 +133,6 @@ video {
   width: 1em;
 }
 
-
-
-
-
 /*Estilo de la sección de BOLETERIA/ESTAFAS*/
 .container-bar {
   background-color: #590202;
@@ -147,7 +143,7 @@ video {
   justify-content: space-between;
   padding: 0;
   margin-bottom: 0;
-  font-size: small;  
+  font-size: small;
 }
 
 .bar-h1 {
@@ -157,9 +153,9 @@ video {
   width: 50%;
 }
 
-
 /*Estilo de la sección de SHOWS*/
-.shows .titulo-shows, .opiniones .titulo-opiniones {
+.shows .titulo-shows,
+.opiniones .titulo-opiniones {
   color: #5dc1b9;
   font-family: fantasy;
 }
@@ -219,7 +215,8 @@ video {
   float: inline-end;
   font-weight: bolder;
 }
-.btn-primary, .btn-mas-info {
+.btn-primary,
+.btn-mas-info {
   font-weight: bold;
 }
 .tarjeta h3 {
@@ -250,7 +247,6 @@ video {
   text-align: center;
   color: #5dc1b9;
 }
-
 
 /*Diseño de las opiniones*/
 #container_reviews {
@@ -316,7 +312,6 @@ video {
   }
 }
 
-
 /*Estilo de MULTIMEDIA*/
 .bar-start {
   width: 100%;
@@ -350,7 +345,6 @@ section.bar-start.active {
   background-color: darkblue;
 }
 
-
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -362,24 +356,23 @@ section.bar-start.active {
   flex-direction: column;
 }
 
-
 /*DISEÑO RESPONSIVO*/
 
 @media screen and (max-width: 1200px) {
-  .nav-menu{
+  .nav-menu {
     font-size: 0.5em;
   }
-  .nav-menu li{
+  .nav-menu li {
     padding: 3px;
   }
-.nav-menu a{
-  font-size: 1.5em;
-  padding: 0;
-}
+  .nav-menu a {
+    font-size: 1.5em;
+    padding: 0;
+  }
   .nav-social {
     width: 30%;
   }
-  .nav-social a{
+  .nav-social a {
     padding: 3px;
   }
   header video {
@@ -407,14 +400,11 @@ section.bar-start.active {
     row-gap: 2px;
   }
 
-  
-
-  .container-footer {    
+  .container-footer {
     display: flex;
     flex-direction: column;
   }
 }
-
 
 @media screen and (max-width: 764px) {
   .abrir-menu,
@@ -494,8 +484,15 @@ section.bar-start.active {
     row-gap: 2px;
   }
 
-  .container-footer {    
+  .container-footer {
     display: flex;
     flex-direction: column;
   }
+}
+
+#formulario {
+  display: grid;
+  grid-template-columns: 25% min-content;
+  gap: 10px;
+  align-items: center;
 }

@@ -24,7 +24,7 @@
                 <li><a href="./multimedia.html">Multimedia</a></li>
                 <li><a href="./question.html">¿Dudas?</a></li>
                 <li><a href="./contact.html">Contacto</a></li>
-                <li><a href="./ADMIN_index.html">Panel ADMIN</a></li>
+                <li><a href="./ADMIN_index.html" id="adminButton">Panel ADMIN</a></li>
             </ul>
             <ul id="navSocial" class="nav-social">
                 <a href="www.facebook.com.ar"><img src="assets/favicon/fb.ico" alt="Fb" />
@@ -37,7 +37,8 @@
                 </a>
             </ul>
         </nav>
-
+    </header>
+    <main>
         <h1>Baja de Artistas</h1>
         <table> <!-- Se crea una tabla para mostrar los productos. -->
             <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
@@ -52,109 +53,102 @@
             <tbody>
                 <!-- Se utiliza la directiva v-for de Vue.js para iterar sobre el array de productos (productos) y crear una fila por cada producto. -->
                 <tr v-for="artista in artistas">
-                    <td>{{ artista.codigo }}</td>
-                    <td>{{ artista.nombre }}</td>
-                    <td>{{ artista.descripcion }}</td>
-                    <td align="right">{{ artista.precio }}</td>
+                    <td>123123</td>
+                    <td>asdasdasd</td>
+                    <td>asdasdasdddd</td>
+                    <td align="right">465645</td>
                     <!-- Se agrega un botón dentro de cada fila que, cuando se hace clic, activa la función eliminarProducto de Vue.js, pasando como argumento el código del producto. -->
                     <td><button @click="eliminarArtista(artista.codigo)">Eliminar</button></td>
                 </tr>
             </tbody>
         </table>
-
         <div class="contenedor-centrado">
             <a href="ADMIN_index.html">Volver al panel ADMIN</a>
         </div>
-
-      
-
-
-<footer>
-    <div>
+    </main>
+    <footer>
         <ul class="container-footer">
             <li><a href="./index.html">Inicio</a></li>
             <li><a href="./direccion.html">¿Cómo llegar?</a></li>
             <li><a href="./multimedia.html">Multimedia</a></li>
             <li><a href="./question.html">¿Dudas?</a></li>
             <li><a href="./contact.html">Contacto</a></li>
-            <li><a href="./ADMIN_index.html">Panel ADMIN</a></li>
         </ul>
-    </div>
-    <div class="footer-l3">
-        Desarrollado por Equipo #9 Full Stack Python Codo A Codo
-    </div>
-</footer>
+        <div class="footer-l3">
+            Desarrollado por Equipo #9 Full Stack Python Codo A Codo
+        </div>
+    </footer>
 
-<script src="https://unpkg.com/vue@next"></script>
-<script>
-    const URL = "http://127.0.0.1:5000/"
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const URL = "http://127.0.0.1:5000/"
 
-    //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-    //const URL = "https://USUARIO.pythonanywhere.com/"
+        //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+        //const URL = "https://USUARIO.pythonanywhere.com/"
 
 
-    //Vue.createApp para crear nuestra aplicación Vue.
-    //Define una propiedad productos en el estado de la aplicación Vue. Inicialmente, es un array vacío que almacenará los datos de los productos obtenidos del servidor.
-    const app = Vue.createApp({
-        data() {
-            return {
-                artistas: []
-            }
-        },
-        methods: {
-            // El método obtenerProductos se utiliza para obtener los productos del servidor. 
-            obtenerArtistas() {
-                // Obtenemos el contenido del inventario
-                fetch(URL + 'artistas') //Realiza una solicitud GET al servidor y obtener la lista de productos.
-                    .then(response => {
-                        // Si es exitosa (response.ok), convierte los datos de la respuesta de formato JSON a un objeto JavaScript.
-                        if (response.ok) { return response.json(); }
-                    })
-
-                    //Asigna los datos de los productos obtenidos a la propiedad productos del estado de Vue.
-                    .then(data => {
-                        // El código Vue itera este elemento para generar la tabla
-                        this.artistas = data;
-                    })
-
-                    //Captura y maneja errores, mostrando una alerta en caso de error al obtener los productos.
-                    .catch(error => {
-                        console.log('Error:', error);
-                        alert('Error al obtener los Artistas.');
-                    });
+        //Vue.createApp para crear nuestra aplicación Vue.
+        //Define una propiedad productos en el estado de la aplicación Vue. Inicialmente, es un array vacío que almacenará los datos de los productos obtenidos del servidor.
+        const app = Vue.createApp({
+            data() {
+                return {
+                    artistas: []
+                }
             },
-
-            //Se utiliza para eliminar un producto.
-            eliminarArtista(codigo) {
-                //Se muestra un diálogo de confirmación. Si el usuario confirma, se realiza una solicitud DELETE al servidor a través de fetch(URL + 'productos/${codigo}', {method: 'DELETE' }).
-                if (confirm('¿Estás seguro de que quieres eliminar este Artista?')) {
-                    fetch(URL + `artistas/${codigo}`, { method: 'DELETE' })
+            methods: {
+                // El método obtenerProductos se utiliza para obtener los productos del servidor. 
+                obtenerArtistas() {
+                    // Obtenemos el contenido del inventario
+                    fetch(URL + 'artistas') //Realiza una solicitud GET al servidor y obtener la lista de productos.
                         .then(response => {
-                            if (response.ok) {
-                                // Si es exitosa (response.ok), elimina el producto y da mensaje de ok.
-                                this.artistas = this.artistas.filter(artista => artista.codigo !== codigo);
-                                alert('Artista eliminado correctamente.');
-                            }
+                            // Si es exitosa (response.ok), convierte los datos de la respuesta de formato JSON a un objeto JavaScript.
+                            if (response.ok) { return response.json(); }
                         })
 
-                        // En caso de error, mostramos una alerta con un mensaje de error.
+                        //Asigna los datos de los productos obtenidos a la propiedad productos del estado de Vue.
+                        .then(data => {
+                            // El código Vue itera este elemento para generar la tabla
+                            this.artistas = data;
+                        })
+
+                        //Captura y maneja errores, mostrando una alerta en caso de error al obtener los productos.
                         .catch(error => {
-                            alert(error.message);
+                            console.log('Error:', error);
+                            alert('Error al obtener los Artistas.');
                         });
+                },
+
+                //Se utiliza para eliminar un producto.
+                eliminarArtista(codigo) {
+                    //Se muestra un diálogo de confirmación. Si el usuario confirma, se realiza una solicitud DELETE al servidor a través de fetch(URL + 'productos/${codigo}', {method: 'DELETE' }).
+                    if (confirm('¿Estás seguro de que quieres eliminar este Artista?')) {
+                        fetch(URL + `artistas/${codigo}`, { method: 'DELETE' })
+                            .then(response => {
+                                if (response.ok) {
+                                    // Si es exitosa (response.ok), elimina el producto y da mensaje de ok.
+                                    this.artistas = this.artistas.filter(artista => artista.codigo !== codigo);
+                                    alert('Artista eliminado correctamente.');
+                                }
+                            })
+
+                            // En caso de error, mostramos una alerta con un mensaje de error.
+                            .catch(error => {
+                                alert(error.message);
+                            });
+                    }
                 }
+            },
+
+            //Una vez iniciada la app de Vue, se carga el método mounted()
+            mounted() {
+                //Se llama al método obtenerProductos para cargar la lista de productos cuando la página se carga por primera vez.
+                this.obtenerArtistas();
             }
-        },
+        });
 
-        //Una vez iniciada la app de Vue, se carga el método mounted()
-        mounted() {
-            //Se llama al método obtenerProductos para cargar la lista de productos cuando la página se carga por primera vez.
-            this.obtenerArtistas();
-        }
-    });
-
-    //Monta la aplicación Vue en el elemento <body> del DOM. Esto activa Vue en la página, haciendo que sea reactivo y maneje el contenido dinámicamente según los datos y las interacciones del usuario.
-    app.mount('body');
-</script>
+        //Monta la aplicación Vue en el elemento <body> del DOM. Esto activa Vue en la página, haciendo que sea reactivo y maneje el contenido dinámicamente según los datos y las interacciones del usuario.
+        app.mount('body');
+    </script>
 </body>
 <script src="assets/js/script.js"></script>
 

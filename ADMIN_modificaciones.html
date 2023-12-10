@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estadio Sol</title>
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="assets/css/stylesheet.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
+    <link rel="stylesheet" href="assets/css/ADMIN_estilos.css" />
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 <li><a href="./multimedia.html">Multimedia</a></li>
                 <li><a href="./question.html">¿Dudas?</a></li>
                 <li><a href="./contact.html">Contacto</a></li>
-                <li><a href="./ADMIN_index.html">Panel ADMIN</a></li>
+                <li><a href="./ADMIN_index.html" id="adminButton">Panel ADMIN</a></li>
             </ul>
             <ul id="navSocial" class="nav-social">
                 <a href="www.facebook.com.ar"><img src="assets/favicon/fb.ico" alt="Fb" />
@@ -37,13 +38,14 @@
                 </a>
             </ul>
         </nav>
-
+    </header>
+    <main>
         <h1>Modificar Artistas del Catálogo</h1>
 
         <!-- Contenedor principal que será controlado por Vue.js. Este contenedor tendrá dos formularios. -->
         <div id="app">
             <!-- Primer formulario: Selector de producto. LLama a la función obtenerProducto cuando se envíe el formulario -->
-            <form class="form_modificar" @submit.prevent="obtenerArtista">
+            <form class="contenedor-centrado" @submit.prevent="obtenerArtista">
                 <label for="codigo">Código:</label>
                 <input type="text" v-model="codigo" required><br>
                 <button type="submit">Modificar Artista</button> <a href="ADMIN_index.html">Volver al panel ADMIN</a>
@@ -133,7 +135,7 @@
                             //En este bloque, se asignan los datos obtenidos a las variables correspondientes de la aplicación Vue.
                             .then(data => {
                                 this.nombre = data.nombre;
-                                this.descripcion = data.descripcion;                                
+                                this.descripcion = data.descripcion;
                                 this.precio = data.precio;
                                 this.imagen_url = data.imagen_url;
                                 this.mostrarDatosArtista = true;
@@ -211,24 +213,19 @@
 
             app.mount('#app');
         </script>
-
-
-
-<footer>
-    <div>
+    </main>
+    <footer>
         <ul class="container-footer">
             <li><a href="./index.html">Inicio</a></li>
             <li><a href="./direccion.html">¿Cómo llegar?</a></li>
             <li><a href="./multimedia.html">Multimedia</a></li>
             <li><a href="./question.html">¿Dudas?</a></li>
             <li><a href="./contact.html">Contacto</a></li>
-            <li><a href="./ADMIN_index.html">Panel ADMIN</a></li>
         </ul>
-    </div>
-    <div class="footer-l3">
-        Desarrollado por Equipo #9 Full Stack Python Codo A Codo
-    </div>
-</footer>
+        <div class="footer-l3">
+            Desarrollado por Equipo #9 Full Stack Python Codo A Codo
+        </div>
+    </footer>
 </body>
 <script src="assets/js/script.js"></script>
 

@@ -134,69 +134,77 @@ if (form) {
   });
 }
 
-
 //API OPINIONES
 let container = document.getElementById("container_reviews");
-fetch("https://rickandmortyapi.com/api/character")
-  .then((response) => response.json())
-  .then((data) => {
-    let fragment = document.createDocumentFragment();
+if (container !== null) {
+  fetch("https://rickandmortyapi.com/api/character")
+    .then((response) => response.json())
+    .then((data) => {
+      let fragment = document.createDocumentFragment();
 
-    data.results.forEach((character) => {
-      let characterContainer = document.createElement("div");
-      characterContainer.className = "character-container";
-
-      let img = document.createElement("img");
-      img.src = character.image;
-      img.alt = character.name;
-      img.className = "img-promo";
-
-      let pName = document.createElement("p");
-      pName.textContent = character.name;
-
-      let review = Math.floor(Math.random() * 5) + 1;
-      let reviewText = "";
-      switch (review) {
-        case 1:
-          reviewText = "Muy malo 👎🏻";
-          break;
-        case 2:
-          reviewText = "Malo";
-          break;
-        case 3:
-          reviewText = "Regular";
-          break;
-        case 4:
-          reviewText = "Muy bueno";
-          break;
-        case 5:
-          reviewText = "¡Excelente! 🎉";
-          break;
+      // Selecciona 6 personajes aleatorios
+      let characters = [];
+      for (let i = 0; i < 6; i++) {
+        let index = Math.floor(Math.random() * data.results.length);
+        characters.push(data.results[index]);
+        data.results.splice(index, 1); // Elimina el personaje seleccionado de los resultados
       }
 
-      let stars = "";
-      for (let i = 0; i < review; i++) {
-        stars += "⭐";
-      }
+      characters.forEach((character) => {
+        let characterContainer = document.createElement("div");
+        characterContainer.className = "character-container";
 
-      let pStars = document.createElement("p");
-      pStars.textContent = stars;
+        let img = document.createElement("img");
+        img.src = character.image;
+        img.alt = character.name;
+        img.className = "img-promo";
 
-      let pReview = document.createElement("p");
-      pReview.textContent = reviewText;
+        let pName = document.createElement("p");
+        pName.textContent = character.name;
 
-      characterContainer.appendChild(img);
-      characterContainer.appendChild(pName);
-      characterContainer.appendChild(pStars);
-      characterContainer.appendChild(pReview);
+        let review = Math.floor(Math.random() * 5) + 1;
+        let reviewText = "";
+        switch (review) {
+          case 1:
+            reviewText = "Muy malo 👎🏻";
+            break;
+          case 2:
+            reviewText = "Malo";
+            break;
+          case 3:
+            reviewText = "Regular";
+            break;
+          case 4:
+            reviewText = "Muy bueno";
+            break;
+          case 5:
+            reviewText = "¡Excelente! 🎉";
+            break;
+        }
 
-      fragment.appendChild(characterContainer);
-    });
-    if (container !== null) {
+        let stars = "";
+        for (let i = 0; i < review; i++) {
+          stars += "⭐";
+        }
+
+        let pStars = document.createElement("p");
+        pStars.textContent = stars;
+
+        let pReview = document.createElement("p");
+        pReview.textContent = reviewText;
+
+        characterContainer.appendChild(img);
+        characterContainer.appendChild(pName);
+        characterContainer.appendChild(pStars);
+        characterContainer.appendChild(pReview);
+
+        fragment.appendChild(characterContainer);
+      });
+
       container.appendChild(fragment);
-    }
-  })
-  .catch((error) => console.error("Error:", error));
+    })
+    .catch((error) => console.error("Error:", error));
+}
 
 let h2 = document.querySelector(".photos h2");
 let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
@@ -208,3 +216,50 @@ setInterval(function () {
     i = (i + 1) % colors.length;
   }
 }, 500);
+
+// Hashes de usuario y contraseña
+const hashedUser =
+  "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"; // Nuestro user
+const hashedPassword =
+  "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"; // Nuestra pass
+
+document
+  .getElementById("adminButton")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Previene la acción por defecto del enlace
+
+    // Comprueba si el usuario ya está en la página ADMIN_index.html
+    if (window.location.pathname.endsWith("ADMIN_index.html")) {
+      return;
+    }
+
+    // Comprueba si el usuario ya ha iniciado sesión
+    let loginTime = localStorage.getItem("loginTime");
+    if (loginTime && new Date().getTime() - loginTime < 300000) {
+      // 5 minutos = 300000 milisegundos
+      // Si han pasado menos de 5 minutos desde el inicio de sesión, redirige al panel de administración
+      window.location.href = "./ADMIN_index.html";
+      return;
+    }
+
+    let user = prompt("Usuario:");
+    let password = prompt("Contraseña:");
+
+    let shaObj = new jsSHA("SHA-256", "TEXT");
+    shaObj.update(user);
+    let hashUser = shaObj.getHash("HEX");
+
+    shaObj = new jsSHA("SHA-256", "TEXT");
+    shaObj.update(password);
+    let hashPassword = shaObj.getHash("HEX");
+
+    if (hashUser === hashedUser && hashPassword === hashedPassword) {
+      // Acceso permitido
+      alert("Bienvenido ADMIN");
+      localStorage.setItem("loginTime", new Date().getTime()); // Almacena la hora del inicio de sesión
+      window.location.href = "./ADMIN_index.html"; // Redirige al panel de administración
+    } else {
+      // Acceso denegado
+      alert("Acceso denegado");
+    }
+  });
