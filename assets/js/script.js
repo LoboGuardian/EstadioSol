@@ -46,7 +46,7 @@ if (button) {
 
 //VALIDACIONES DEL FORMULARIO
 function validarFormulario() {
-  if (document.getElementById("nombre")) {
+  if (url.toString().includes("contact.html")) {
     let nombre = document.getElementById("nombre").value;
     let apellido = document.getElementById("apellido").value;
     let dni = document.getElementById("dni").value;
@@ -113,7 +113,7 @@ function enviarCorreo() {
   console.log("Entra a enviar correo");
   let correo = document.getElementById("correo").value;
 
-  Email.send({
+  /*Email.send({
     Host: "smtp.gmail.com",
     Username: "testpython899@gmail.com",
     Password: "54N;HtHcV!Sij&!",
@@ -121,10 +121,11 @@ function enviarCorreo() {
     From: "testpython899@gmail.com",
     Subject: "Confirmación de compra de entradas",
     Body: "Gracias por tu compra. Te esperamos en el concierto.",
-  }).then((message) => alert("Correo enviado exitosamente"));
+  }).then((message) => */
+  alert(`Correo enviado a ${correo} exitosamente`);
 }
 let form = document.querySelector("form");
-if (form) {
+if (form && url.toString().includes("contact.html")) {
   form.addEventListener("submit", function (event) {
     console.log("Entra a validar formulario");
     event.preventDefault();
