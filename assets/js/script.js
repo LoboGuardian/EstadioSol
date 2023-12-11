@@ -142,9 +142,9 @@ if (container !== null) {
     .then((data) => {
       let fragment = document.createDocumentFragment();
 
-      // Selecciona 6 personajes aleatorios
+      // Selecciona 5 personajes aleatorios
       let characters = [];
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 5; i++) {
         let index = Math.floor(Math.random() * data.results.length);
         characters.push(data.results[index]);
         data.results.splice(index, 1); // Elimina el personaje seleccionado de los resultados
@@ -162,7 +162,7 @@ if (container !== null) {
         let pName = document.createElement("p");
         pName.textContent = character.name;
 
-        let review = Math.floor(Math.random() * 5) + 1;
+        let review = Math.floor(Math.random() * 4) + 1;
         let reviewText = "";
         switch (review) {
           case 1:

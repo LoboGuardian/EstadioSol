@@ -59,7 +59,10 @@ video {
   top: 0;
   width: 48px;
   height: 48px;
+  color:#5dc1b9;
 }
+
+
 
 .nav-bar {
   height: 2em;
@@ -285,32 +288,11 @@ video {
 .photos h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 30px;
-  background: linear-gradient(
-    90deg,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
+  font-size: 30px;  
   background-size: 500% auto;
   animation: rainbow 3s ease-in-out infinite;
 }
 
-@keyframes rainbow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /*Estilo de MULTIMEDIA*/
 .bar-start {
@@ -424,10 +406,11 @@ section.bar-start.active {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2rem;
+    padding: 1.5rem;
+    font-size: x-small;
     background-color: #c77d21;
     bottom: 01;
-    box-shadow: 0 0 0 100vmax rgba(189, 5, 5, 0.877);
+    box-shadow: 0 0 0 100vmax #030526c8;
     z-index: 2;
     border: 1;
   }

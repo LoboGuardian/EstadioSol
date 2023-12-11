@@ -1,6 +1,9 @@
 # Estadio Sol: Tu Portal de Boletos para Bandas en Vivo
 ## Nuestra plataforma ofrece boletería para emocionantes conciertos de diversas bandas. ¡Experimenta la música en directo como nunca antes!
 
+Hosteado en Netlify
+https://estadiosol.netlify.app/
+
 Público Objetivo:
 - Audiencia principal: Amantes de la música y aficionados a conciertos de todas las edades.
 
@@ -46,7 +49,7 @@ Recursos Externos:
 
 Contacto:
 - Correo electrónico de soporte: support@estadiosol.com
-- Teléfono de contacto: [+584129795053]
+- Teléfono de contacto: [+584262954608]
 - Formulario de contacto en el sitio web.
 
 Fecha de Entrega:
