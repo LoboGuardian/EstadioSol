@@ -46,55 +46,57 @@ if (button) {
 
 //VALIDACIONES DEL FORMULARIO
 function validarFormulario() {
-  let nombre = document.getElementById("nombre").value;
-  let apellido = document.getElementById("apellido").value;
-  let dni = document.getElementById("dni").value;
-  let correo = document.getElementById("correo").value;
-  let password = document.getElementById("password").value;
+  if (document.getElementById("nombre")) {
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+    let dni = document.getElementById("dni").value;
+    let correo = document.getElementById("correo").value;
+    let password = document.getElementById("password").value;
 
-  //Validar que los campos no estén vacíos
-  if (
-    nombre.trim() == "" ||
-    apellido.trim() == "" ||
-    dni.trim() == "" ||
-    correo.trim() == "" ||
-    password.trim() == ""
-  ) {
-    alert("Todos los campos son obligatorios.");
-    return false;
+    //Validar que los campos no estén vacíos
+    if (
+      nombre.trim() == "" ||
+      apellido.trim() == "" ||
+      dni.trim() == "" ||
+      correo.trim() == "" ||
+      password.trim() == ""
+    ) {
+      alert("Todos los campos son obligatorios.");
+      return false;
+    }
+
+    //Validar el DNI
+    if (isNaN(dni) || dni < 0) {
+      alert("Por favor, ingrese un DNI válido.");
+      return false;
+    }
+
+    //Validar el correo electrónico
+    let regexCorreo = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+    if (!regexCorreo.test(correo)) {
+      alert("Por favor, ingrese un correo electrónico válido.");
+      return false;
+    }
+
+    // Mostrar un cartel de confirmación con los datos ingresados
+    let confirmacion = confirm(
+      "Por favor, revise los datos ingresados:\n\n" +
+        "Nombre: " +
+        nombre +
+        "\n" +
+        "Apellido: " +
+        apellido +
+        "\n" +
+        "DNI: " +
+        dni +
+        "\n" +
+        "Correo: " +
+        correo +
+        "\n\n" +
+        "¿Son correctos estos datos?"
+    );
+    return confirmacion; // Si el usuario acepta, se envía el formulario
   }
-
-  //Validar el DNI
-  if (isNaN(dni) || dni < 0) {
-    alert("Por favor, ingrese un DNI válido.");
-    return false;
-  }
-
-  //Validar el correo electrónico
-  let regexCorreo = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-  if (!regexCorreo.test(correo)) {
-    alert("Por favor, ingrese un correo electrónico válido.");
-    return false;
-  }
-
-  // Mostrar un cartel de confirmación con los datos ingresados
-  let confirmacion = confirm(
-    "Por favor, revise los datos ingresados:\n\n" +
-      "Nombre: " +
-      nombre +
-      "\n" +
-      "Apellido: " +
-      apellido +
-      "\n" +
-      "DNI: " +
-      dni +
-      "\n" +
-      "Correo: " +
-      correo +
-      "\n\n" +
-      "¿Son correctos estos datos?"
-  );
-  return confirmacion; // Si el usuario acepta, se envía el formulario
 }
 
 /* Asignar la función de validación al evento de envío del formulario
