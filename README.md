@@ -49,7 +49,7 @@ Recursos Externos:
 
 Contacto:
 - Correo electrónico de soporte: support@estadiosol.com
-- Teléfono de contacto: [+584262954608]
+- Teléfono de contacto: [+]
 - Formulario de contacto en el sitio web.
 
 Fecha de Entrega:
